@@ -13,7 +13,7 @@ Once Node is installed, navigate to the directory where you want to stave the pr
 git clone https://github.com/ChinonsoIg/myreads.git
 npm install
 ```
-The above commands will clone the project into your local machine and install all the dependencies
+The above commands will clone the project into your local machine and install all the dependencies.
 
 Once the denependencies are installed, launch the app by running the command:
 
@@ -21,5 +21,9 @@ Once the denependencies are installed, launch the app by running the command:
 npm start
 ```
 A new browser should automatically open displaying the app. However, if this doesn't happen, navigate to [http://localhost:3000](http://localhost:3000) in your browser to see the project live in the development mode.
+
+## View
+Below is an image of the homepage.
+![Homepage](/src/images/homepage.png).
 
 The page will reload if you make edits.

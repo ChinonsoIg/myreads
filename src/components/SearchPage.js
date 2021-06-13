@@ -65,7 +65,6 @@ class SearchPage extends Component {
                 value={query}
                 onChange={this.getBooks}
               />
-
             </div>
           </div>
           <div className="search-books-results">
