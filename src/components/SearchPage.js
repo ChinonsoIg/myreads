@@ -39,25 +39,14 @@ class SearchPage extends Component {
     if(newBook.length > 0) {
       return newBook.map((bk) => {
         const newShelf = Object.assign(book, { shelf: bk.shelf });
-        console.log(newShelf.shelf)
-        // const updatedShelf = newShelf.shelf
-        // console.log(updatedShelf)
-        return newShelf;
+        const updatedShelf = newShelf.shelf;
+        return updatedShelf;
       })
     } else {
       const newShelf = Object.assign(book, { shelf: "none" });
-      console.log(newShelf.shelf)
-      return newShelf;
+      const updatedShelf = newShelf.shelf;
+      return updatedShelf;
     }
-  }
-
-  checkMultiple = (arr) => {
-    if(Array.isArray(arr)) {
-      // console.log('Im array')
-      return true
-    }
-    // console.log('im not array')
-    return false
   }
   
   render() {
@@ -89,7 +78,7 @@ class SearchPage extends Component {
                     <p>Please enter a valid search term</p>
                   </div>
                 </li>
-              : newBooks.map((book) => (
+              : newBooks.map((book) => (                
                 <li key={book.id}>
                     <div className="book">
                       <div className="book-top">
@@ -100,7 +89,6 @@ class SearchPage extends Component {
                             style={{width: "100%", height: "100%"}} />
                         </div>
                       <div className="book-shelf-changer">
-                        <p>{this.checkMultiple(this.checkState(book, mainBooks))}</p>
                         <select 
                           value={this.checkState(book, mainBooks)}
                           onChange={(e) => handleShelfChange(book, e.target.value)}
