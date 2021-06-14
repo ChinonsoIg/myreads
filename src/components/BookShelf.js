@@ -2,20 +2,21 @@ import React, { Component } from 'react';
 import '../App.css';
 import PropTypes from 'prop-types';
 
-const Read = ({ mainBooks, handleShelfChange, altImage }) => {  
-  Read.propTypes = {
+const BookShelf = ({ mainBooks, handleShelfChange, altImage }) => {
+  BookShelf.propTypes = {
     mainBooks: PropTypes.array.isRequired,
-    handleShelfChange: PropTypes.func.isRequired
+    handleShelfChange: PropTypes.func.isRequired,
+    altImage: PropTypes.string.isRequired,
   }
       
-  const read = (bookShelf) => {
+  const wantToRead = (bookShelf) => {
     let bookArray = [];
     bookShelf.map((mainbook) => {
-      if(mainbook.shelf === "read") {
+      if(mainbook.shelf === "wantToRead") {
         bookArray = [...bookArray, mainbook];
-        return bookArray;
+        return bookArray
       }
-      return null;
+      return null
     })
     return bookArray;
   }
@@ -23,9 +24,9 @@ const Read = ({ mainBooks, handleShelfChange, altImage }) => {
   return (
     <ol className="books-grid">
       {
-        read(mainBooks).length === 0
+        wantToRead(mainBooks).length === 0
         ? <li>No book in this shelf!</li>
-        : read(mainBooks).map((book) => (
+        : wantToRead(mainBooks).map((book) => (
           <li key={book.id}>
             <div className="book">
               <div className="book-top">
@@ -34,10 +35,10 @@ const Read = ({ mainBooks, handleShelfChange, altImage }) => {
                 </div>
                 <div className="book-shelf-changer">
                   <select
-                    value={book.shelf}
+                    value={book.shelf} 
                     onChange={(e) => handleShelfChange(book, e.target.value)}
                     >
-                    <option value="move" disabled>Move to...</option>
+                    <option value="move">Move to...</option>
                     <option value="currentlyReading">Currently Reading</option>
                     <option value="wantToRead">Want to Read</option>
                     <option value="read">Read</option>
@@ -52,7 +53,7 @@ const Read = ({ mainBooks, handleShelfChange, altImage }) => {
         ))
       }
     </ol>
-  );
+  );  
 }
 
-export default Read;
+export default BookShelf;

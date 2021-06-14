@@ -67,6 +67,7 @@ class SearchPage extends Component {
               />
             </div>
           </div>
+
           <div className="search-books-results">
             <ol className="books-grid">
             {
@@ -91,7 +92,6 @@ class SearchPage extends Component {
                         <select 
                           value={this.checkState(book, mainBooks)}
                           onChange={(e) => handleShelfChange(book, e.target.value)}
-                          // multiple={Array.isArray(this.checkState(book, mainBooks)) ? true : false}
                           >
                           <option value="move" disabled>Move to...</option>
                           <option value="currentlyReading">Currently Reading</option>

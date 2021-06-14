@@ -22,8 +22,12 @@ npm start
 ```
 A new browser should automatically open displaying the app. However, if this doesn't happen, navigate to [http://localhost:3000](http://localhost:3000) in your browser to see the project live in the development mode.
 
-## View
-Below is an image of the homepage.
+## How to Use the App
+The homepage displays the different bookshelves. Click on the dropdown icon to change bookshelf.
+Below is an image of how the homepage looks like.
 ![Homepage](/src/images/homepage.png).
 
-The page will reload if you make edits.
+The searchpage has an input space to type the name of the book you are searching. As you type in the name, the result of your search displays, and updates automatically as you update type or delete characters. Click on the dropdown icon to add book to a shelf.
+Below is an image of how the searchpage looks like.
+![Searchpage](/src/images/searchpage.png).
+
