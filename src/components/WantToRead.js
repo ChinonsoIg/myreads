@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../App.css';
 import PropTypes from 'prop-types';
 
@@ -47,7 +47,7 @@ const WantToRead = ({ mainBooks, handleShelfChange, altImage }) => {
                 </div>
               </div>
               <div className="book-title">{book.title}</div>
-              <div className="book-authors">{book.authors.join(" , ")}</div>
+              <div className="book-authors">{book.authors.join(", ")}</div>
             </div>
           </li>
         ))

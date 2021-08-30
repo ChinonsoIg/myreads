@@ -1,6 +1,6 @@
 # MyReads Project
-This project can be used to search and store books on different shelves, depending on the books you have read, the ones you are currently reading, and the ones you want to read. 
-The link to the hosted version is: [MyReads](https://chinonso-myreads-app.netlify.app).
+This project can be used to search and store books on different shelves, depending on the books you have read, the ones you are currently reading, and the ones you want to read.
+The link to the hosted version is: [chinonso-myreads-app](https://chinonso-myreads-app.netlify.app).
 
 ## Purpose
 This App was built for the Udacity React Nanodegree Program, to demonstrate understanding of the basic structure and operation of React applications.

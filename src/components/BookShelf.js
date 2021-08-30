@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../App.css';
+
+
 import PropTypes from 'prop-types';
 
 const BookShelf = ({ mainBooks, handleShelfChange, altImage }) => {
@@ -8,7 +10,7 @@ const BookShelf = ({ mainBooks, handleShelfChange, altImage }) => {
     handleShelfChange: PropTypes.func.isRequired,
     altImage: PropTypes.string.isRequired,
   }
-      
+
   const wantToRead = (bookShelf) => {
     let bookArray = [];
     bookShelf.map((mainbook) => {
@@ -47,7 +49,7 @@ const BookShelf = ({ mainBooks, handleShelfChange, altImage }) => {
                 </div>
               </div>
               <div className="book-title">{book.title}</div>
-              <div className="book-authors">{book.authors.join(" , ")}</div>
+              <div className="book-authors">{book.authors.join(", ")}</div>
             </div>
           </li>
         ))

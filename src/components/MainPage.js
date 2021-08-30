@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import CurrentlyReading from './CurrentlyReading';
 import WantToRead from './WantToRead';
 import Read from './Read';
-import BookShelf from './BookShelf';
 import PropTypes from 'prop-types';
 
 class MainPage extends Component {
